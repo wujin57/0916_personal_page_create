@@ -1,5 +1,5 @@
 /**
- * Alex Morgan Portfolio - Application Core
+ * Wuchin Sung Portfolio - Application Core
  * Features: Real-Time Telemetry Clock, Timezone Switcher, Theme Engine,
  * Project Simulation Modals, Focus Timer, Profile Customizer, & Toast System.
  */
@@ -15,14 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     focusTimerSeconds: 25 * 60,
     focusTimerInterval: null,
     isFocusRunning: false,
-    profile: JSON.parse(localStorage.getItem('user-profile-data') || 'null') || {
-      name: 'Alex Morgan',
-      brand: 'Alex.dev',
-      role: 'Full-Stack Engineer & System Architect',
-      location: 'Taipei / Remote Worldwide',
-      email: 'alex.morgan.dev@example.com',
-      bio: 'Passionate software craftsman bridging scalable cloud architecture with bespoke, fluid user interfaces. Dedicated to clean code, ultra-responsive performance, and intuitive digital experiences.'
-    }
+    profile: (() => {
+      const saved = JSON.parse(localStorage.getItem('user-profile-data') || 'null');
+      if (saved && saved.name && saved.name !== 'Alex Morgan') return saved;
+      return {
+        name: 'Wuchin Sung',
+        brand: 'Wuchin.dev',
+        role: 'Software Engineer | Python • C / C++ • Machine Learning',
+        location: 'Taipei / Remote Worldwide',
+        email: 'wujin910504@gmail.com',
+        bio: 'Passionate software engineer specializing in high-performance computing, systems programming with C / C++, and intelligent machine learning solutions powered by Python.'
+      };
+    })()
   };
 
   // ==========================================
@@ -462,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
           const val = input.value.trim();
           if (val) {
-            doc.innerHTML += `<br><span style="color:var(--accent-cyan);">&gt; Peer (Alex):</span> ${val}`;
+            doc.innerHTML += `<br><span style="color:var(--accent-cyan);">&gt; Peer (Wuchin):</span> ${val}`;
             input.value = '';
             showToast('Change broadcasted to CRDT replica.');
           }
@@ -553,12 +557,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   dom.modalResetBtn.addEventListener('click', () => {
     const defaultProfile = {
-      name: 'Alex Morgan',
-      brand: 'Alex.dev',
-      role: 'Full-Stack Engineer & System Architect',
+      name: 'Wuchin Sung',
+      brand: 'Wuchin.dev',
+      role: 'Software Engineer | Python • C / C++ • Machine Learning',
       location: 'Taipei / Remote Worldwide',
-      email: 'alex.morgan.dev@example.com',
-      bio: 'Passionate software craftsman bridging scalable cloud architecture with bespoke, fluid user interfaces. Dedicated to clean code, ultra-responsive performance, and intuitive digital experiences.'
+      email: 'wujin910504@gmail.com',
+      bio: 'Passionate software engineer specializing in high-performance computing, systems programming with C / C++, and intelligent machine learning solutions powered by Python.'
     };
     state.profile = defaultProfile;
     localStorage.removeItem('user-profile-data');
@@ -570,12 +574,12 @@ document.addEventListener('DOMContentLoaded', () => {
   dom.customizerForm.addEventListener('submit', (e) => {
     e.preventDefault();
     state.profile = {
-      name: dom.editName.value.trim() || 'Alex Morgan',
-      brand: dom.editBrand.value.trim() || 'Alex.dev',
-      role: dom.editRole.value.trim() || 'Software Engineer',
-      location: dom.editLocation.value.trim() || 'Remote',
-      email: dom.editEmail.value.trim() || 'alex.morgan.dev@example.com',
-      bio: dom.editBio.value.trim() || 'Software Engineer.'
+      name: dom.editName.value.trim() || 'Wuchin Sung',
+      brand: dom.editBrand.value.trim() || 'Wuchin.dev',
+      role: dom.editRole.value.trim() || 'Software Engineer | Python • C / C++ • Machine Learning',
+      location: dom.editLocation.value.trim() || 'Taipei / Remote Worldwide',
+      email: dom.editEmail.value.trim() || 'wujin910504@gmail.com',
+      bio: dom.editBio.value.trim() || 'Passionate software engineer specializing in Python, C / C++, and Machine Learning.'
     };
 
     localStorage.setItem('user-profile-data', JSON.stringify(state.profile));
