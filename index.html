@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morgan | Software Engineer & Creative Developer</title>
+  <meta name="description" content="Personal portfolio and live time hub for Alex Morgan, Full-Stack Engineer & System Architect specializing in modern web applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="glow-sphere sphere-1"></div>
+  <div class="glow-sphere sphere-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name" id="nav-brand-name">Alex.dev</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#time-hub" class="nav-link"><span class="nav-num">01.</span>Time Hub</a>
+        <a href="#about" class="nav-link"><span class="nav-num">02.</span>About</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">03.</span>Skills</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">04.</span>Projects</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">05.</span>Experience</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">06.</span>Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Compact live time ticker in navbar -->
+        <div class="nav-clock" id="nav-clock" title="Current Local Time">
+          <span class="live-pulse-dot"></span>
+          <span id="nav-clock-time">--:--:--</span>
+        </div>
+
+        <!-- Customize Profile Modal Trigger -->
+        <button class="icon-btn" id="edit-profile-btn" title="Customize Profile Details" aria-label="Edit Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+        </button>
+
+        <!-- Dark / Light theme toggle -->
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+          <svg class="sun-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Profile Column -->
+        <div class="hero-profile">
+          <div class="status-pill">
+            <span class="live-pulse-dot"></span>
+            <span id="profile-availability">Available for innovative projects & engineering roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Building the next generation of <span class="gradient-text">digital experiences</span>
+          </h1>
+
+          <div class="profile-identity">
+            <div class="avatar-wrapper">
+              <img src="assets/avatar.jpg" alt="Alex Morgan Portrait" class="profile-avatar" id="profile-avatar">
+              <div class="avatar-ring"></div>
+            </div>
+            <div class="identity-info">
+              <h2 class="profile-name" id="profile-name">Alex Morgan</h2>
+              <p class="profile-title" id="profile-role">Full-Stack Engineer &amp; System Architect</p>
+              <div class="location-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span id="profile-location">Taipei / Remote Worldwide</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="hero-bio" id="profile-bio">
+            Passionate software craftsman bridging scalable cloud architecture with bespoke, fluid user interfaces. Dedicated to clean code, ultra-responsive performance, and intuitive digital experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <button class="btn btn-secondary" id="hero-copy-email-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Email</span>
+            </button>
+            <a href="#contact" class="btn btn-outline">Let's Talk</a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links-row">
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="social-chip" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-chip" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noreferrer" class="social-chip" title="X (Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>Twitter/X</span>
+            </a>
+            <a href="mailto:alex.morgan.dev@example.com" class="social-chip" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span id="profile-email-badge">alex.morgan.dev@example.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Centerpiece: Hero Live Time Hub -->
+        <div class="hero-clock-wrapper" id="time-hub">
+          <div class="glass-card time-hub-card">
+            <!-- Time Hub Card Top Controls -->
+            <div class="hub-header">
+              <div class="hub-title-group">
+                <div class="pulse-indicator">
+                  <span class="pulse-ring"></span>
+                  <span class="pulse-core"></span>
+                </div>
+                <div>
+                  <h3 class="hub-heading">REAL-TIME TELEMETRY</h3>
+                  <p class="hub-subheading" id="hub-timezone-label">Local System Time (Auto-Detected)</p>
+                </div>
+              </div>
+
+              <!-- 12h / 24h format switcher -->
+              <div class="format-switcher">
+                <button class="toggle-pill active" id="btn-format-24" data-format="24">24H</button>
+                <button class="toggle-pill" id="btn-format-12" data-format="12">12H</button>
+              </div>
+            </div>
+
+            <!-- Dynamic Day/Night Greeting -->
+            <div class="greeting-bar" id="greeting-bar">
+              <span class="greeting-icon" id="greeting-icon">☀️</span>
+              <span class="greeting-text" id="greeting-text">Good morning, welcome to my space</span>
+            </div>
+
+            <!-- Prominent Digital Clock Display -->
+            <div class="digital-clock-face">
+              <div class="time-readout">
+                <span class="digit-box" id="clock-hours">10</span>
+                <span class="colon">:</span>
+                <span class="digit-box" id="clock-minutes">24</span>
+                <span class="colon">:</span>
+                <span class="digit-box seconds" id="clock-seconds">35</span>
+                <span class="ampm-badge" id="clock-ampm">AM</span>
+              </div>
+              
+              <!-- Smooth seconds progress line -->
+              <div class="second-progress-wrapper" title="Current minute elapsed">
+                <div class="second-progress-bar" id="second-progress-bar"></div>
+              </div>
+            </div>
+
+            <!-- Date and Calendar Info -->
+            <div class="date-telemetry">
+              <div class="date-main" id="clock-date">Wednesday, September 16, 2026</div>
+              <div class="date-sub">
+                <span class="badge" id="clock-day-of-year">Day 259 of 2026</span>
+                <span class="badge" id="clock-utc-offset">UTC+08:00</span>
+                <span class="badge badge-accent" id="clock-week-number">Week 38</span>
+              </div>
+            </div>
+
+            <!-- World Timezone Quick Switcher -->
+            <div class="world-clock-tabs">
+              <span class="tabs-label">Timezone Switcher:</span>
+              <div class="tz-buttons">
+                <button class="tz-chip active" data-tz="local">📍 Local</button>
+                <button class="tz-chip" data-tz="America/New_York">🗽 NYC</button>
+                <button class="tz-chip" data-tz="America/Los_Angeles">🌉 SFO</button>
+                <button class="tz-chip" data-tz="Europe/London">🇬🇧 LDN</button>
+                <button class="tz-chip" data-tz="Asia/Tokyo">🗼 TYO</button>
+              </div>
+            </div>
+
+            <!-- Interactive Productivity / Focus Stopwatch Widget -->
+            <div class="focus-mini-widget">
+              <div class="focus-header">
+                <div class="focus-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Quick Focus Timer</span>
+                </div>
+                <span class="focus-status" id="focus-status">Ready</span>
+              </div>
+              <div class="focus-body">
+                <span class="focus-timer-digits" id="focus-timer-digits">25:00</span>
+                <div class="focus-controls">
+                  <button class="btn-micro" id="focus-start-btn">Start</button>
+                  <button class="btn-micro" id="focus-reset-btn">Reset</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Bar -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-num">5+</div>
+            <div class="metric-label">Years of Experience</div>
+            <div class="metric-desc">Building resilient web services</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">40+</div>
+            <div class="metric-label">Completed Projects</div>
+            <div class="metric-desc">Production web apps &amp; tools</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">99.9%</div>
+            <div class="metric-label">System Uptime</div>
+            <div class="metric-desc">Architected for fault tolerance</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">1.2M+</div>
+            <div class="metric-label">Lines of Code</div>
+            <div class="metric-desc">TypeScript, Go, Python &amp; SQL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">02 // PROFILE OVERVIEW</span>
+          <h2 class="section-title">Engineering with <span class="gradient-text">Intent &amp; Craft</span></h2>
+          <p class="section-subtitle">Bridging complex backend logic with effortless, high-performance UI engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <h3>My Philosophy</h3>
+            <p>
+              I believe modern software should be blazing fast, visually breathtaking, and uncompromisingly dependable. From microservice pipelines to micro-interactions on the glass, every detail matters.
+            </p>
+            <p>
+              When I'm not writing code, I'm diving into distributed database architectures, testing experimental web animation primitives, or exploring generative interfaces.
+            </p>
+            <div class="highlight-tags">
+              <span class="tag">System Design</span>
+              <span class="tag">High Performance</span>
+              <span class="tag">Clean Code</span>
+              <span class="tag">Micro-Frontends</span>
+              <span class="tag">API First</span>
+            </div>
+          </div>
+
+          <!-- Code Snippet Card / Terminal Simulation -->
+          <div class="code-terminal glass-card">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">developer.config.ts</div>
+              <div class="terminal-lang">TypeScript</div>
+            </div>
+            <pre class="terminal-body"><code><span class="c-keyword">interface</span> <span class="c-type">EngineerProfile</span> {
+  name: <span class="c-string">"Alex Morgan"</span>;
+  role: <span class="c-string">"Full-Stack Architect"</span>;
+  coreStack: <span class="c-string">["TypeScript", "React", "Node.js", "Go"]</span>;
+  cloud: <span class="c-string">["AWS", "Docker", "Kubernetes", "PostgreSQL"]</span>;
+  status: <span class="c-string">"Ready to build ambitious products"</span>;
+  coffeeToCodeRatio: <span class="c-number">Infinity</span>;
+}
+
+<span class="c-keyword">export const</span> developer: <span class="c-type">EngineerProfile</span> = {
+  passion: <span class="c-string">"100% Quality &amp; Precision"</span>,
+  currentFocus: <span class="c-string">"Real-time reactive web systems"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">03 // CAPABILITIES</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Mastery</span></h2>
+          <p class="section-subtitle">Proven toolchains and frameworks used in production across complex environments.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category: Frontend -->
+          <div class="skill-category glass-card">
+            <div class="cat-header">
+              <div class="cat-icon frontend-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div>
+                <h4>Frontend Architecture</h4>
+                <p>Reactive, accessible &amp; dynamic</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">React / Next.js</span>
+              <span class="skill-pill">Vue 3</span>
+              <span class="skill-pill">Modern CSS / Glass</span>
+              <span class="skill-pill">TailwindCSS</span>
+              <span class="skill-pill">State Machines</span>
+              <span class="skill-pill">WebSockets</span>
+              <span class="skill-pill">Canvas / WebGL</span>
+            </div>
+          </div>
+
+          <!-- Category: Backend -->
+          <div class="skill-category glass-card">
+            <div class="cat-header">
+              <div class="cat-icon backend-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div>
+                <h4>Backend &amp; Services</h4>
+                <p>Scalable, fault-tolerant pipelines</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Node.js / Express</span>
+              <span class="skill-pill">Go (Golang)</span>
+              <span class="skill-pill">Python / FastAPI</span>
+              <span class="skill-pill">GraphQL &amp; REST</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Redis Cache</span>
+              <span class="skill-pill">gRPC</span>
+              <span class="skill-pill">Prisma ORM</span>
+            </div>
+          </div>
+
+          <!-- Category: Cloud & DevOps -->
+          <div class="skill-category glass-card">
+            <div class="cat-header">
+              <div class="cat-icon devops-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <div>
+                <h4>Cloud &amp; DevOps</h4>
+                <p>Containerization &amp; automated CI/CD</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Kubernetes</span>
+              <span class="skill-pill">AWS (ECS, S3, RDS)</span>
+              <span class="skill-pill">GitHub Actions</span>
+              <span class="skill-pill">Terraform</span>
+              <span class="skill-pill">Nginx</span>
+              <span class="skill-pill">Cloudflare Workers</span>
+              <span class="skill-pill">Prometheus</span>
+            </div>
+          </div>
+
+          <!-- Category: Design & Workflow -->
+          <div class="skill-category glass-card">
+            <div class="cat-header">
+              <div class="cat-icon design-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+              </div>
+              <div>
+                <h4>Design &amp; Quality</h4>
+                <p>Intuitive UX &amp; rigorous testing</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Figma Prototyping</span>
+              <span class="skill-pill">Design Systems</span>
+              <span class="skill-pill">Jest / Vitest</span>
+              <span class="skill-pill">Playwright</span>
+              <span class="skill-pill">Git / Trunk Flow</span>
+              <span class="skill-pill">Web Vitals</span>
+              <span class="skill-pill">Accessibility (a11y)</span>
+              <span class="skill-pill">Agile Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section section-padding" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">04 // SELECTED WORKS</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Engineering Projects</span></h2>
+          <p class="section-subtitle">A showcase of full-stack platforms, cloud architectures, and interactive tools.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All Projects (4)</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="cloud">Cloud &amp; AI</button>
+          <button class="filter-btn" data-filter="frontend">Frontend &amp; Tools</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass-card" data-category="cloud fullstack">
+            <div class="project-visual ai-visual">
+              <div class="visual-badge">AI Telemetry</div>
+              <div class="mockup-screen">
+                <div class="mockup-header">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-inner">
+                  <div class="chart-line l1"></div>
+                  <div class="chart-line l2"></div>
+                  <div class="chart-stats">
+                    <span>Latency: 18ms</span>
+                    <span>Throughput: 98.4%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>TypeScript</span>
+                <span>Next.js</span>
+                <span>Python</span>
+                <span>Redis</span>
+              </div>
+              <h3 class="project-title">Aether Intelligence Telemetry Hub</h3>
+              <p class="project-description">
+                Real-time anomaly detection engine and analytics suite processing over 50,000 telemetry events per second with sub-50ms query latency.
+              </p>
+              <div class="project-links">
+                <button class="btn-demo" data-project="aether">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                  <span>Interactive Preview</span>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="btn-code" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card" data-category="cloud">
+            <div class="project-visual cloud-visual">
+              <div class="visual-badge">Mesh Network</div>
+              <div class="mockup-screen">
+                <div class="mockup-header"><span></span><span></span><span></span></div>
+                <div class="mesh-network-preview">
+                  <div class="node n1"></div>
+                  <div class="node n2"></div>
+                  <div class="node n3"></div>
+                  <div class="node-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Go (Golang)</span>
+                <span>Kubernetes</span>
+                <span>Docker</span>
+                <span>gRPC</span>
+              </div>
+              <h3 class="project-title">Orbital Mesh Cluster Orchestrator</h3>
+              <p class="project-description">
+                Lightweight service mesh controller for multi-region microservice deployments with automated health probes and zero-downtime failover.
+              </p>
+              <div class="project-links">
+                <button class="btn-demo" data-project="orbital">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                  <span>Interactive Preview</span>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="btn-code" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card" data-category="frontend fullstack">
+            <div class="project-visual collab-visual">
+              <div class="visual-badge">Real-Time Sync</div>
+              <div class="mockup-screen">
+                <div class="mockup-header"><span></span><span></span><span></span></div>
+                <div class="collab-preview">
+                  <div class="cursor-badge">Sarah: typing...</div>
+                  <div class="cursor-badge c2">Liam: active</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>React</span>
+                <span>WebSockets</span>
+                <span>CRDT</span>
+                <span>Tailwind</span>
+              </div>
+              <h3 class="project-title">PulsePad Collaborative Studio</h3>
+              <p class="project-description">
+                Peer-to-peer real-time collaborative workspace supporting conflict-free replicated data types (CRDTs), live multi-cursor presence, and version history.
+              </p>
+              <div class="project-links">
+                <button class="btn-demo" data-project="pulsepad">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                  <span>Interactive Preview</span>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="btn-code" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card" data-category="frontend">
+            <div class="project-visual ui-visual">
+              <div class="visual-badge">Design Engine</div>
+              <div class="mockup-screen">
+                <div class="mockup-header"><span></span><span></span><span></span></div>
+                <div class="ui-tokens-preview">
+                  <span class="token t-cyan"></span>
+                  <span class="token t-purple"></span>
+                  <span class="token t-emerald"></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span>Vanilla CSS</span>
+                <span>Web Components</span>
+                <span>Figma Tokens</span>
+              </div>
+              <h3 class="project-title">Chroma Glass UI Design System</h3>
+              <p class="project-description">
+                Ultra-lightweight zero-dependency glassmorphic UI library with seamless dark/light modes, accessible focus rings, and smooth micro-animations.
+              </p>
+              <div class="project-links">
+                <button class="btn-demo" data-project="chroma">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                  <span>Interactive Preview</span>
+                </button>
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="btn-code" title="View Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-section section-padding" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">05 // CAREER TIMELINE</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Milestones</span></h2>
+          <p class="section-subtitle">Impactful roles across high-growth startups and established tech scale-ups.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 &mdash; Present</div>
+            <div class="timeline-card glass-card">
+              <div class="job-header">
+                <h3>Lead Platform Engineer</h3>
+                <span class="company-badge">Aether Dynamics</span>
+              </div>
+              <p class="job-summary">
+                Led a team of 6 engineers architecting real-time streaming services and high-throughput telemetry pipelines. Reduced mean query response time by 42% and achieved zero downtime across major releases.
+              </p>
+              <div class="job-tags">
+                <span>TypeScript</span>
+                <span>Go</span>
+                <span>Kafka</span>
+                <span>Kubernetes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 &mdash; 2024</div>
+            <div class="timeline-card glass-card">
+              <div class="job-header">
+                <h3>Senior Full-Stack Engineer</h3>
+                <span class="company-badge">CloudScale Labs</span>
+              </div>
+              <p class="job-summary">
+                Designed and built modern web application interfaces for enterprise cloud management. Spearheaded transition to micro-frontends and reusable design system components.
+              </p>
+              <div class="job-tags">
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2020 &mdash; 2022</div>
+            <div class="timeline-card glass-card">
+              <div class="job-header">
+                <h3>Software Engineer</h3>
+                <span class="company-badge">Vanguard Interactive</span>
+              </div>
+              <p class="job-summary">
+                Developed responsive client-facing web applications, optimized core web vitals, and implemented secure GraphQL APIs with automated unit and integration tests.
+              </p>
+              <div class="job-tags">
+                <span>JavaScript</span>
+                <span>Vue.js</span>
+                <span>Docker</span>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">06 // GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle">Whether you have an upcoming project, architecture challenge, or just want to connect.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Info -->
+          <div class="contact-info-card glass-card">
+            <h3>Direct Communication</h3>
+            <p>
+              I'm always open to discussing new opportunities, open-source initiatives, or technical consults. My inbox is always monitored.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-details">
+                <span class="label">Email Address</span>
+                <span class="value" id="contact-email-text">alex.morgan.dev@example.com</span>
+                <button class="copy-btn-inline" id="copy-email-btn" title="Click to copy email">Copy to Clipboard</button>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-details">
+                <span class="label">Location &amp; Timezone</span>
+                <span class="value" id="contact-location-text">Taipei, Taiwan (GMT+8) • Remote Ready</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="contact-details">
+                <span class="label">Typical Response Time</span>
+                <span class="value">Under 24 Hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card glass-card">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Your Name *</label>
+                  <input type="text" id="form-name" required placeholder="Jane Doe">
+                  <span class="error-msg" id="name-error">Please enter your name</span>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Your Email *</label>
+                  <input type="email" id="form-email" required placeholder="jane@example.com">
+                  <span class="error-msg" id="email-error">Please enter a valid email</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject *</label>
+                <input type="text" id="form-subject" required placeholder="Project Inquiry / Engineering Role">
+                <span class="error-msg" id="subject-error">Please enter a subject</span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message *</label>
+                <textarea id="form-message" rows="5" required placeholder="Tell me about your project, timeline, and goals..."></textarea>
+                <span class="error-msg" id="message-error">Please write a message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#" class="brand-logo footer-brand">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-name" id="footer-brand-name">Alex.dev</span>
+          <span class="brand-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">Crafted with precision, vanilla HTML/CSS &amp; JavaScript. Zero bloat.</p>
+      </div>
+      <div class="footer-center">
+        <div class="footer-time-ticker">
+          <span class="live-pulse-dot"></span>
+          <span>Local Time:</span>
+          <span class="mono" id="footer-clock-time">--:--:--</span>
+        </div>
+      </div>
+      <div class="footer-right">
+        <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          <span>Top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Live Profile Customizer -->
+  <div class="modal-backdrop" id="customizer-modal">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>Personalize This Page</h3>
+          <p>Instantly customize your name, role, bio, and contact details.</p>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="customizer-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="edit-name">Full Name</label>
+            <input type="text" id="edit-name" value="Alex Morgan">
+          </div>
+          <div class="form-group">
+            <label for="edit-brand">Brand / Nav Handle</label>
+            <input type="text" id="edit-brand" value="Alex.dev">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="edit-role">Professional Title</label>
+            <input type="text" id="edit-role" value="Full-Stack Engineer & System Architect">
+          </div>
+          <div class="form-group">
+            <label for="edit-location">Location</label>
+            <input type="text" id="edit-location" value="Taipei / Remote Worldwide">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="edit-email">Email Address</label>
+          <input type="email" id="edit-email" value="alex.morgan.dev@example.com">
+        </div>
+        <div class="form-group">
+          <label for="edit-bio">Bio Summary</label>
+          <textarea id="edit-bio" rows="3">Passionate software craftsman bridging scalable cloud architecture with bespoke, fluid user interfaces. Dedicated to clean code, ultra-responsive performance, and intuitive digital experiences.</textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="modal-reset-btn">Reset Defaults</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Interactive Project Demo Simulation -->
+  <div class="modal-backdrop" id="project-demo-modal">
+    <div class="modal-dialog demo-modal glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="demo-modal-title">Interactive Project Simulation</h3>
+          <p id="demo-modal-subtitle">Live sandbox preview</p>
+        </div>
+        <button class="modal-close-btn" id="demo-modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="demo-modal-body" id="demo-modal-body">
+        <!-- Injected via JavaScript based on chosen project -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
