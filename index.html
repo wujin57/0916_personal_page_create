@@ -432,50 +432,49 @@ developer = <span class="c-type">EngineerProfile</span>()</code></pre>
         <!-- Filter Controls -->
         <div class="projects-filter">
           <button class="filter-btn active" data-filter="all">All Projects (4)</button>
-          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-          <button class="filter-btn" data-filter="cloud">Cloud &amp; AI</button>
-          <button class="filter-btn" data-filter="frontend">Frontend &amp; Tools</button>
+          <button class="filter-btn" data-filter="personal">Personal Page</button>
+          <button class="filter-btn" data-filter="ai">Machine Learning</button>
+          <button class="filter-btn" data-filter="systems">C / C++ &amp; Systems</button>
         </div>
 
         <!-- Projects Grid -->
         <div class="projects-grid" id="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card glass-card" data-category="cloud fullstack">
-            <div class="project-visual ai-visual">
-              <div class="visual-badge">AI Telemetry</div>
+          <!-- Project 1: Personal Page -->
+          <article class="project-card glass-card" data-category="personal web fullstack">
+            <div class="project-visual ui-visual">
+              <div class="visual-badge">Featured Portfolio</div>
               <div class="mockup-screen">
                 <div class="mockup-header">
                   <span></span><span></span><span></span>
                 </div>
-                <div class="mockup-inner">
-                  <div class="chart-line l1"></div>
-                  <div class="chart-line l2"></div>
-                  <div class="chart-stats">
-                    <span>Latency: 18ms</span>
-                    <span>Throughput: 98.4%</span>
+                <div class="mockup-inner" style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:18px 12px;background:rgba(0,0,0,0.25);">
+                  <div style="font-family:var(--font-mono);font-weight:700;font-size:1.15rem;color:var(--accent-cyan);letter-spacing:1px;">&lt;Wuchin.dev /&gt;</div>
+                  <div class="chart-stats" style="margin-top:14px;width:100%;">
+                    <span>Stack: Vanilla Web</span>
+                    <span style="color:var(--accent-emerald);">● Git Connected</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="project-content">
               <div class="project-tags">
-                <span>TypeScript</span>
-                <span>Next.js</span>
-                <span>Python</span>
-                <span>Redis</span>
+                <span>Personal Page</span>
+                <span>JavaScript</span>
+                <span>CSS Glassmorphism</span>
+                <span>Git / GitHub</span>
               </div>
-              <h3 class="project-title">Aether Intelligence Telemetry Hub</h3>
+              <h3 class="project-title">Personal Page &amp; Interactive Portfolio Hub</h3>
               <p class="project-description">
-                Real-time anomaly detection engine and analytics suite processing over 50,000 telemetry events per second with sub-50ms query latency.
+                Personal developer hub featuring real-time world timezones, technical skill matrix (Python, C/C++, ML), interactive project simulations, and zero-dependency glassmorphism architecture.
               </p>
               <div class="project-links">
-                <button class="btn-demo" data-project="aether">
+                <button class="btn-demo" data-project="personalpage">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
                   <span>Interactive Preview</span>
                 </button>
-                <a href="https://github.com/wujin57" target="_blank" rel="noreferrer" class="btn-code" title="View Source Code">
+                <a href="https://github.com/wujin57/0916_personal_page_create" target="_blank" rel="noreferrer" class="btn-code" title="View GitHub Repository">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>Code</span>
+                  <span>Repository</span>
                 </a>
               </div>
             </div>

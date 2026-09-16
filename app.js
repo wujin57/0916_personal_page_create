@@ -361,6 +361,49 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. Interactive Project Demo Simulations
   // ==========================================
   const projectDemos = {
+    personalpage: {
+      title: 'Personal Page & Live Portfolio Hub',
+      subtitle: 'Architecture & Repository Inspector',
+      render: () => `
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="background:rgba(255,255,255,0.03);border:1px solid var(--bg-card-border);border-radius:12px;padding:16px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+              <span style="font-weight:600;color:var(--accent-cyan);font-family:var(--font-mono);font-size:1rem;">0916_personal_page_create</span>
+              <span class="status-pill" style="margin:0;font-size:0.75rem;"><span class="live-pulse-dot"></span>Git Connected</span>
+            </div>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.5;margin-bottom:14px;">
+              Custom-built personal developer portfolio and interactive hub showcasing real-time timezones, technical skills in Python, C / C++, & Machine Learning, interactive project sandboxes, and zero-dependency vanilla architecture.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;font-size:0.8125rem;">
+              <div style="background:rgba(0,0,0,0.25);padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);">
+                <div style="color:var(--text-muted);">Core Stack</div>
+                <div style="font-weight:600;color:#fff;margin-top:3px;">Vanilla HTML / CSS / JS</div>
+              </div>
+              <div style="background:rgba(0,0,0,0.25);padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);">
+                <div style="color:var(--text-muted);">Remote Branch</div>
+                <div style="font-weight:600;color:var(--accent-primary);margin-top:3px;">origin/main</div>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <a href="https://github.com/wujin57/0916_personal_page_create" target="_blank" rel="noreferrer" class="btn btn-primary" style="flex:1;text-align:center;justify-content:center;">
+              <span>View On GitHub</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <button class="btn btn-secondary" id="sim-copy-repo-btn">Copy Repo URL</button>
+          </div>
+        </div>
+      `,
+      init: () => {
+        const copyBtn = document.getElementById('sim-copy-repo-btn');
+        if (!copyBtn) return;
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText('https://github.com/wujin57/0916_personal_page_create.git').then(() => {
+            showToast('Repository URL copied to clipboard!', 'success');
+          });
+        });
+      }
+    },
     aether: {
       title: 'Aether Intelligence Telemetry Hub',
       subtitle: 'Real-Time Anomaly Detection & Stream Simulator',
